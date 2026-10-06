@@ -103,6 +103,10 @@
   .vcard { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
   .vcard video { width: 100%; background: #000; aspect-ratio: 9/16; object-fit: contain; }
   .vcard.wide video { aspect-ratio: 16/9; }
+  .videos.long { margin-top: 22px; }
+  .videos.long .vcard video { aspect-ratio: 16/9; }
+  .sub-head { margin: 48px 0 18px; display: grid; gap: 6px; }
+  .sub-head p { color: var(--ink-2); max-width: 60ch; }
   .vcard .body { padding: 16px 18px 20px; display: grid; gap: 6px; }
   .vcard .body p { color: var(--ink-2); font-size: 0.95rem; }
   .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-weight: 600; }
@@ -122,6 +126,8 @@
   .mosaic figure { margin: 0; cursor: zoom-in; border-radius: 10px; overflow: hidden; background: var(--bg-2); }
   .mosaic img { width: 100%; aspect-ratio: 1; object-fit: cover; }
   .mosaic .span2 { grid-column: span 2; }
+  .mosaic .span3 { grid-column: span 3; }
+  .mosaic .span3 video { aspect-ratio: 16/9; object-fit: contain; background: #000; }
   .mosaic .span2 img { aspect-ratio: 2/1; }
   .mosaic .poster img { aspect-ratio: 3/5; }
   .mosaic video { width: 100%; aspect-ratio: 1; object-fit: cover; }
@@ -258,6 +264,37 @@
         </div>
       </div>
     </div>
+
+    <div class="sub-head">
+      <h3>Longer formats: procedures, systems and simulations</h3>
+      <p>When a skill has too many steps for thirty seconds, the structure has to carry it. A chaptered procedure, a guided tour of a system, and an interactive simulation.</p>
+    </div>
+    <div class="videos long">
+      <div class="vcard">
+        <video controls preload="none" playsinline poster="assets/img/poster-learning-wet-room.webp" src="assets/video/learning-wet-room.mp4"></video>
+        <div class="body">
+          <span class="tag">Training film · 4 min 45 s</span>
+          <h3>Waterproofing a wet room, step by step</h3>
+          <p>A full procedure as a chaptered film: check the systems are in, wet the surface, cut pieces for the pipe penetrations, seal the corners, wait 24 hours. Every chapter is one action with one on-screen rule.</p>
+        </div>
+      </div>
+      <div class="vcard">
+        <video controls preload="none" playsinline poster="assets/img/poster-system-residents-portal.webp" src="assets/video/system-residents-portal.mp4"></video>
+        <div class="body">
+          <span class="tag">System walkthrough · 2 min</span>
+          <h3>Residents' portal, explained</h3>
+          <p>A guided tour of the apartment buyers' portal: documents to sign, where to track status, how to read the plans. Built so a first-time user never needs to call support.</p>
+        </div>
+      </div>
+      <div class="vcard">
+        <video controls preload="none" playsinline poster="assets/img/poster-simulation-construction.webp" src="assets/video/simulation-construction.mp4"></video>
+        <div class="body">
+          <span class="tag">Interactive simulation · 1 min 40 s</span>
+          <h3>Construction simulation</h3>
+          <p>Screen capture of an interactive learning simulation: the build stages on a timeline, a 360° walk through a finished apartment with hotspots, and a defect-wall explorer. Learners click, not watch.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -349,6 +386,7 @@
           <ul>
             <li>Program design and session formats</li>
             <li>Visual identity brief across print, screen and outdoor</li>
+            <li>Opening film: site managers reading letters written to them, shot on site</li>
             <li>Logistics for a full day with external speakers</li>
           </ul>
         </div>
@@ -361,6 +399,9 @@
           </figure>
           <figure class="poster" data-full="assets/img/matpsim-keyvisual-03.webp" data-cap="Poster, managers at their peak">
             <img src="assets/img/matpsim-keyvisual-03.webp" alt="Climbing High poster with glass office towers" loading="lazy" width="846" height="1400">
+          </figure>
+          <figure class="span3">
+            <video controls preload="none" playsinline poster="assets/img/poster-matpsim-opener.webp" src="assets/video/matpsim-opener.mp4" aria-label="Conference opening film: site managers reading letters to camera"></video>
           </figure>
           <figure class="span2" data-full="assets/img/matpsim-learning-session.webp" data-cap="A session in progress">
             <img src="assets/img/matpsim-learning-session.webp" alt="Conference room full of site managers watching a presentation" loading="lazy" width="1600" height="1200">
