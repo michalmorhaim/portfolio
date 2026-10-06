@@ -103,6 +103,16 @@
   .vcard { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
   .vcard video { width: 100%; background: #000; aspect-ratio: 9/16; object-fit: contain; }
   .vcard.wide video { aspect-ratio: 16/9; }
+  .feature { display: grid; background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  @media (min-width: 860px) { .feature { grid-template-columns: 1.5fr 1fr; align-items: center; } }
+  .feature video { width: 100%; aspect-ratio: 16/9; background: #000; }
+  .feature .body { padding: 22px 24px 26px; display: grid; gap: 8px; }
+  .feature .body h3 { font-size: 1.5rem; }
+  .feature .body p { color: var(--ink-2); }
+  .videos.short { grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .videos.short { grid-template-columns: 1fr 1fr 1fr; } }
+  .videos.short .lead-cell { align-self: center; display: grid; gap: 8px; padding-right: 12px; }
+  .videos.short .lead-cell p { color: var(--ink-2); }
   .videos.long { margin-top: 22px; }
   .videos.long .vcard video { aspect-ratio: 16/9; }
   .sub-head { margin: 48px 0 18px; display: grid; gap: 6px; }
@@ -227,16 +237,30 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="num">02</span>
-      <h2>Turning a physical skill into a short lesson</h2>
-      <p>Video lessons produced for construction crews. Each one takes a hands-on skill with a right and a wrong way, and compresses it into something you can watch on a phone on site. The same thinking applies to a pencil as to a tape measure.</p>
+      <h2>Turning a skill into a lesson people actually watch</h2>
+      <p>Video lessons produced for construction crews, from a two-minute film about a whole role to thirty-second clips for one rule on site. The same thinking applies to a pencil as to a tape measure.</p>
     </div>
-    <div class="videos">
+
+    <div class="feature">
+      <video controls preload="none" playsinline poster="assets/img/poster-content-construction-story.webp" src="assets/video/content-construction-story.mp4"></video>
+      <div class="body">
+        <span class="tag">Learning film · 1 min 53 s</span>
+        <h3>The site logistics manager, in two minutes</h3>
+        <p>A whole role explained in a two-minute film, built on a story and visual metaphors instead of a checklist. The 15-minute site scan, the four cups of coffee, the things nobody tells you on day one. Produced with an external crew.</p>
+      </div>
+    </div>
+
+    <div class="sub-head">
+      <h3>Microlearning: one rule, one clip</h3>
+      <p>Hands-on skills with a right and a wrong way, compressed into something you can watch on a phone on site, captioned for sound-off viewing.</p>
+    </div>
+    <div class="videos short">
       <div class="vcard">
         <video controls preload="none" playsinline poster="assets/img/poster-learning-drywall.webp" src="assets/video/learning-drywall.mp4"></video>
         <div class="body">
           <span class="tag">Microlearning · 17 s</span>
           <h3>Finishing drywall above openings</h3>
-          <p>One rule, one measurement, one mistake to avoid. Shot on site, captioned for sound-off viewing.</p>
+          <p>One rule, one measurement, one mistake to avoid. Shot on site.</p>
         </div>
       </div>
       <div class="vcard">
@@ -245,14 +269,6 @@
           <span class="tag">Microlearning · 23 s</span>
           <h3>Securing drainage pipe before the pour</h3>
           <p>Maximum spacing between supports, shown rather than described. Built to be re-watched, not memorised.</p>
-        </div>
-      </div>
-      <div class="vcard wide">
-        <video controls preload="none" playsinline poster="assets/img/poster-content-construction-story.webp" src="assets/video/content-construction-story.mp4"></video>
-        <div class="body">
-          <span class="tag">Learning film · 1 min 53 s</span>
-          <h3>The site logistics manager, in two minutes</h3>
-          <p>A whole role explained in a two-minute film, built on a story and visual metaphors instead of a checklist. Produced with an external crew.</p>
         </div>
       </div>
     </div>
