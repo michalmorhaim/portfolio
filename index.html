@@ -60,16 +60,14 @@
 
   .hero { padding: 56px 0 40px; }
   .hero .grid { display: grid; gap: 32px; align-items: center; }
-  @media (min-width: 860px) { .hero .grid { grid-template-columns: 1.1fr 0.9fr; gap: 56px; } .hero { padding: 88px 0 64px; } }
+  @media (min-width: 860px) { .hero { padding: 88px 0 64px; } }
   .eyebrow { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 18px; }
+  .hero h1 { max-width: 18ch; }
   .hero p.lead { font-size: 1.15rem; color: var(--ink-2); max-width: 46ch; margin-top: 22px; }
   .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
   .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
   .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
   .btn:hover { border-color: var(--accent); }
-  .hero figure { margin: 0; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(0,0,0,.45); background: var(--bg-2); }
-  .hero figure img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
-  .hero figcaption { font-size: 0.8rem; color: var(--muted); padding: 10px 14px; }
 
   section { padding: 64px 0; border-top: 1px solid var(--line); }
   @media (min-width: 860px) { section { padding: 96px 0; } }
@@ -158,10 +156,6 @@
         <a class="btn" href="https://www.linkedin.com/in/michal-mor-haim-8106b6214/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
-    <figure>
-      <img src="assets/img/ashted-live-01.webp" alt="Speaker on stage in front of the AshTED screen" width="1200" height="1600" fetchpriority="high">
-      <figcaption>AshTED, 2025. A speaker on stage.</figcaption>
-    </figure>
   </div>
 </header>
 
